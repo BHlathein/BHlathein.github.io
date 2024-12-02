@@ -7,7 +7,9 @@
 }
 
 /* General Body Styling */
-body {
+html, body {
+    height: 100%; /* Ensures body takes full height for scrolling */
+    overflow: auto; /* Prevents any scrolling restrictions */
     background-color: #5c5c5c;
     color: #333;
     line-height: 1.6;
@@ -27,11 +29,9 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative; /* Changed from sticky to relative */
-    top: 0; /* No longer needed for relative positioning */
+    position: relative; /* Allow header to scroll with the content */
     z-index: 1000;
 }
-
 
 header h1 {
     margin: 0;
@@ -117,4 +117,11 @@ footer {
     main {
         padding: 1.5em;
     }
+}
+
+/* Extra Content Height for Scroll Testing */
+main::after {
+    content: '';
+    display: block;
+    height: 150vh; /* Adds height to test scrolling behavior */
 }
