@@ -8,59 +8,72 @@
 
 /* General Body Styling */
 body {
-    background-color: #f0f8ff;
+    background-color: #5c5c5c;
     color: #333;
     line-height: 1.6;
     margin: 0;
-    padding: 0;
 }
 
 /* Header Styling */
 header {
     background-color: #008080;
     color: #fff;
-    padding: 1.5em;
+    padding: 1em;
     text-align: center;
-    margin-bottom: 1.5em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 4px solid #005050;
+    height: 25vh; /* Header height is 1/4 of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 {
-    margin-bottom: 0.5em;
-    font-size: 2em;
+    margin: 0;
+    font-size: 2.5em; /* Slightly larger font for readability */
+    line-height: 1.2; /* Adjusted line height for better spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds subtle shadow for clarity */
 }
 
 /* Navigation Styling */
 nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap; /* Allows wrapping to multiple rows */
     justify-content: center;
-    gap: 1.5em;
-    padding-top: 0.5em;
+    gap: 0.5em; /* Spacing between links */
+    padding: 0.5em 0; /* Padding above and below navigation */
+    margin: 0;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.1em;
-    transition: color 0.3s;
+    font-size: 0.9em; /* Smaller font for compact links */
+    padding: 0.4em 0.8em; /* Padding for clickable area */
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
 nav a:hover, nav a.active {
     font-weight: bold;
     text-decoration: underline;
+    background-color: #005050;
 }
 
 /* Main Content Styling */
 main {
-    padding: 2.5em;
+    margin-top: 1.5em; /* Ensure spacing between navigation and content */
+    padding: 2em;
     max-width: 800px;
     margin: auto;
-    background-color: #ffffff;
+    background-color: #a6a9ac;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 1em;
-    margin-bottom: 2em;
 }
 
 main h2 {
@@ -68,19 +81,39 @@ main h2 {
     margin-top: 1em;
     margin-bottom: 1em;
     font-size: 1.8em;
+    border-bottom: 2px solid #008080;
+    padding-bottom: 0.5em;
 }
 
 main p {
     margin-bottom: 1.5em;
-    font-size: 1.1em;
+    font-size: 1em; /* Slightly smaller font for consistency */
+    line-height: 1.6;
 }
 
 /* Footer Styling */
 footer {
     text-align: center;
     padding: 1.5em;
-    background-color: #e6e6e6;
+    background-color: #414243;
     color: #666;
     font-size: 0.9em;
     margin-top: 2em;
+    border-top: 4px solid #ccc;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        gap: 0.3em; /* Reduce spacing for small screens */
+    }
+    
+    nav a {
+        font-size: 0.8em; /* Smaller font for compact view */
+        padding: 0.3em 0.6em;
+    }
+    
+    main {
+        padding: 1.5em;
+    }
 }
