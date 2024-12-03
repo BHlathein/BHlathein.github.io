@@ -48,7 +48,7 @@ nav ul {
     justify-content: center;
     gap: 0.5em; /* Spacing between links */
     padding: 0.5em 0; /* Padding above and below navigation */
-    margin: 0;
+    margin: -0.5em;
 }
 
 nav a {
@@ -77,6 +77,11 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Adjust spacing between sections */
+section {
+    margin-bottom: 2em; /* Add extra space between sections */
+}
+
 main h2 {
     color: #008080;
     margin-top: 1em;
@@ -90,6 +95,11 @@ main p {
     margin-bottom: 1.5em;
     font-size: 1em; /* Slightly smaller font for consistency */
     line-height: 1.6;
+}
+
+/* Extra spacing between list items */
+ul li {
+    margin-bottom: 1.5em; /* Adds space between list items */
 }
 
 /* Footer Styling */
@@ -125,3 +135,10 @@ main::after {
     display: block;
     height: 150vh; /* Adds height to test scrolling behavior */
 }
+
+.section {
+    margin: 2rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+  }
