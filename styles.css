@@ -82,6 +82,16 @@ section {
     margin-bottom: 2em; /* Add extra space between sections */
 }
 
+/* Alternate Section Colors */
+.section:nth-of-type(odd) {
+    background-color: #dfd4c3; /* Creamier white */
+}
+
+.section:nth-of-type(even) {
+    background-color: #c6c5c5; /* Pure white */
+}
+
+
 main h2 {
     color: #008080;
     margin-top: 1em;
