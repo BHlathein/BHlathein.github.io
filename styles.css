@@ -102,6 +102,9 @@ ul li {
     margin-bottom: 1.5em; /* Adds space between list items */
 }
 
+ul nav {
+    color: darkblue;
+}
 /* Footer Styling */
 footer {
     text-align: center;
